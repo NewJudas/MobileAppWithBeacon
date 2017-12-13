@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:MobilTest"
+             x:Class="MobilTest.MainPage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Gray">
+            <Label Text="Du e registrerad" FontSize="Large"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Dessa är registrerade" TextColor="Red" FontSize="Medium"/>
+            <ListView ItemsSource="{Binding obsLista}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Id}" TextColor="Red" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
